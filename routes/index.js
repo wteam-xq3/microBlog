@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../node_modules/user.js');
-var Post = require('../node_modules/post.js');
+var User = require('../public/js/dao/user.js');
+var Post = require('../public/js/dao/post.js');
 var crypto = require('crypto');
 
 var app = express();
@@ -14,7 +14,7 @@ app.use(function(req,res,next){
 
   res.locals.error = err.length ? err : null;
   res.locals.success = success.length ? success : null;
-   
+
   next();
 });
 

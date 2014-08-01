@@ -13,13 +13,14 @@ var app = express();
 // 连接数据库
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
-var settings = require('./settings');
+var settings = require('./public/js/dao/settings');
 // 用户登录状态记录（express 3.x 开始独立出来了）
 var flash = require('connect-flash');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+app.locals.staticFilePrefix = '/static';
 
 app.use(favicon());
 app.use(logger('dev'));
