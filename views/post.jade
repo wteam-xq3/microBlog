@@ -1,0 +1,17 @@
+each post, index in posts
+  if index % 3 == 0
+    //- start row
+    <div class="row">
+  .span4
+    h2
+      a(href="/u/#{post.user}") #{post.user}说
+    p
+      small #{post.time}
+    p #{post.post}
+  if index % 3 == 2
+    //- end row
+    </div>
+if posts.length % 3 != 0
+  //- end row
+  </div>
+

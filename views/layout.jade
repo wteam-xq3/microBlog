@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/bootstrap-responsive.min.css')
+  body
+    .navbar.navbar-fixed-top.navbar-inverse
+      .navbar-inner
+        .container
+          a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          if !user
+            a.brand(href="/") Microblog
+          else
+            a.brand(href="/") #{user.name}
+          .nav-collapse
+            ul.nav
+              li.active
+                a(href="/") 首页
+              if !user
+                li
+                  a(href="/login") 登录
+                li
+                  a(href="/reg") 注册
+              else
+                li
+                  a(href="/logout") 注销
+
+    #container.container
+      if success
+        .alert.alert-success #{success}
+      if error
+        .alert.alert-error #{error}
+      block content
+      hr
+      footer
+        p
+          a(href="www.baidul.com" target="_blank") ByXQ 2014
+  script(src='/js/jquery-1.9.1.min.js')
+  script(src='/js/bootstrap.min.js')
