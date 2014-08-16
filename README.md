@@ -24,7 +24,8 @@ path = "D:\MongoDB 2.6 Standard\bin"
 mongod.exe -dbpath "D:\MongoDB 2.6 Standard\data\db"
 
 ``` 
-(ps: "D:\MongoDB 2.6 Standard\bin" 为MongoDB安装目录,而data\db为数据库数据存储目录，需手动创建)
+##### ps: 
+"D:\MongoDB 2.6 Standard\bin" 为MongoDB安装目录,而data\db为数据库数据存储目录，需手动创建
 * 全局安装 “express”模块：`npm install -g express`
 * 进入 “microBlog”文件夹启动项目: cmd运行 `npm start` (或 进入bin `node www`)
 * 打开浏览器（建议 chrome）输入： `localhost:300`(端口号在 bin/www 文件中设置)
