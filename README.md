@@ -5,7 +5,7 @@
 
 
 PS:
-1.安装了 Mongodb后需要需要cmd 启动数据库服务。
+1.安装 Mongodb后，运行代码前 需要cmd 启动数据库服务。
 
 2.可视化操作Mongodb， 建议使用 “MongoVUe”。
 
